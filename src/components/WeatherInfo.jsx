@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 import WeatherCard from './WeatherCard';
 import './WeatherInfo.css'
 
@@ -27,10 +27,6 @@ const [temInfo,setTemInfo]=useState({});
     // console.log(weatherInfo);
     setTemInfo(weatherInfo);
   }
-
-  useEffect(()=>{
-    getWeatherInfo();
-  },[]);
 
 // console.log(temInfo);
 

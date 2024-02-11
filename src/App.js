@@ -7,7 +7,7 @@ import img from './Assets/background.jpg';
 function App() {
   return (
     <div className="App">
-      <div className="imgb" style={{
+      <div  style={{
           position: "absolute",
           top:"0",
           left:"0",
@@ -15,7 +15,7 @@ function App() {
         height:"100%",
         zIndex: "-1",
         overflow: "hidden"}}>
-        <img src={img} alt="image" />
+        <img src={img} alt="" />
       </div>
       <div className="content">
         <Datebuilder />
