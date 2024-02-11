@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './WeatherCard.css';
+import { WiSunset,WiHumidity, WiRainWind } from "react-icons/wi";
+import { FiWind } from "react-icons/fi";
 
 const WeatherCard = ({temporaryInfo}) => {
     const[weatherState,setWeatherState]=useState("");
@@ -34,23 +36,43 @@ useEffect(()=>{
             break;
     }}
 },[weathermood]);
+
+        let sec=sunset;
+        let date=new Date(sec* 1000);
+        let timeStr=`${date.getHours()}:${date.getMinutes()}`;
   return (
     <div className='main'>
         <div className='cityname'>
         <div className='ctn'>{name}  {country}</div>
         </div>
         <div className='tem'>
-        <div className='temp'>{temp}deg</div>
+        <div className='temp'>{temp}&deg;</div>
         </div>
         <div className='stw'>
         <span className='state' >{weatherState}</span>
         <span className='wthmood'>{weathermood}</span>
         </div>
         <div className='sphs'>
-            <span>{speed}km/h</span>
-            <span>{pressure}pr</span>
-            <span>{humidity} humidity</span>
-            <span>{sunset} sunset</span>
+        <span><p><WiSunset/></p>
+            <span>
+            <p>{timeStr} PM</p>
+            <p>Sunset</p></span>
+            </span>
+        <span><p><WiRainWind/></p>
+            <span>
+            <p>{pressure}</p>
+            <p>Pressure</p></span>
+            </span>
+        <span><p><FiWind/></p>
+            <span>
+            <p>{speed}</p>
+            <p>Speed</p></span>
+            </span>
+        <span><p><WiHumidity/></p>
+            <span>
+            <p>{humidity}</p>
+            <p>Humidity</p></span>
+            </span>
         </div>
     </div>
   )

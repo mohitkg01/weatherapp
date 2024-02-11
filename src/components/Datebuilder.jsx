@@ -27,10 +27,10 @@ const Datebuilder = () => {
 
     const currentDate=new Date();
     const date=`${days[currentDate.getDay()]} ${currentDate.getDate()} ${months[currentDate.getMonth()]}`
-
+    
   return (
     <div className='date' style={ {
-      color:"#333",
+      color:"#fff",
       fontSize:"18px",
       fontWeight:"bold",
      textAlign:"center",

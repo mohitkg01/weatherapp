@@ -1,22 +1,21 @@
 import './App.css';
 import Datebuilder from './components/Datebuilder';
 import WeatherInfo from './components/WeatherInfo';
-import ImageSlide from './components/ImageSlide';
 
+import img from './Assets/background.jpg';
 
 function App() {
   return (
     <div className="App">
-        <div className="ImageSlide" style={{
+      <div className="imgb" style={{
           position: "absolute",
           top:"0",
           left:"0",
           width:"100%",
         height:"100%",
         zIndex: "-1",
-        overflow: "hidden"
-}}>
-        <ImageSlide />
+        overflow: "hidden"}}>
+        <img src={img} alt="image" />
       </div>
       <div className="content">
         <Datebuilder />
